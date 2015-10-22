@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TGPhotoViewController">
@@ -15,7 +14,6 @@
                 <outlet property="filterView" destination="mfq-V7-07J" id="Pf2-0x-IU7"/>
                 <outlet property="filterWandButton" destination="bwi-ED-cl6" id="g4M-yf-0ho"/>
                 <outlet property="photoView" destination="AgS-wg-ici" id="7RM-EQ-xh7"/>
-                <outlet property="topViewHeight" destination="tVK-li-H3V" id="3hD-FB-P1W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,18 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="820"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRi-bL-lCE" userLabel="Top View">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                    <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="tVK-li-H3V"/>
-                    </constraints>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AgS-wg-ici" userLabel="Photo View">
-                    <rect key="frame" x="0.0" y="60" width="600" height="600"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="AgS-wg-ici" secondAttribute="height" multiplier="1:1" id="qsw-BM-KC1"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="711"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-hD-eWO" userLabel="Bottom View">
                     <rect key="frame" x="0.0" y="710" width="600" height="110"/>
@@ -79,6 +67,7 @@
                     <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="WAy-eH-OU9" firstAttribute="leading" secondItem="Wwe-hD-eWO" secondAttribute="leading" constant="20" id="5hN-ie-9dy"/>
+                        <constraint firstItem="WAy-eH-OU9" firstAttribute="top" secondItem="Wwe-hD-eWO" secondAttribute="top" constant="15" id="DpJ-tP-Qf0"/>
                         <constraint firstAttribute="centerY" secondItem="bwi-ED-cl6" secondAttribute="centerY" id="I2p-r8-1NP"/>
                         <constraint firstAttribute="trailing" secondItem="bwi-ED-cl6" secondAttribute="trailing" constant="20" id="IYO-SA-Jab"/>
                         <constraint firstItem="Scs-OK-XY9" firstAttribute="centerY" secondItem="pc5-8R-lAJ" secondAttribute="centerY" id="VPt-4s-DKt"/>
@@ -88,29 +77,16 @@
                         <constraint firstItem="Scs-OK-XY9" firstAttribute="centerX" secondItem="pc5-8R-lAJ" secondAttribute="centerX" id="s1v-1h-l1J"/>
                     </constraints>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-nz-mqT" userLabel="Actions View">
-                    <rect key="frame" x="0.0" y="660" width="600" height="50"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AmE-W0-HE1"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="1" green="0.35686275360000003" blue="0.0039215688589999999" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="rRi-bL-lCE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0bN-43-pjc"/>
                 <constraint firstItem="AgS-wg-ici" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Az4-RI-dx8"/>
                 <constraint firstItem="Wwe-hD-eWO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DxI-HU-wrS"/>
-                <constraint firstItem="ubt-nz-mqT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L4g-Gm-enY"/>
-                <constraint firstAttribute="trailing" secondItem="rRi-bL-lCE" secondAttribute="trailing" id="O3i-Jp-qop"/>
-                <constraint firstItem="Wwe-hD-eWO" firstAttribute="top" secondItem="ubt-nz-mqT" secondAttribute="bottom" id="QIn-hH-Trv"/>
+                <constraint firstItem="AgS-wg-ici" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VR2-GG-v5a"/>
                 <constraint firstAttribute="trailing" secondItem="Wwe-hD-eWO" secondAttribute="trailing" id="XPd-3d-1vb"/>
-                <constraint firstItem="AgS-wg-ici" firstAttribute="top" secondItem="rRi-bL-lCE" secondAttribute="bottom" id="YCz-3Y-1Zj"/>
                 <constraint firstAttribute="trailing" secondItem="AgS-wg-ici" secondAttribute="trailing" id="Yh2-Fi-Eoj"/>
-                <constraint firstItem="ubt-nz-mqT" firstAttribute="top" secondItem="AgS-wg-ici" secondAttribute="bottom" id="bqG-Vq-NCB"/>
-                <constraint firstItem="rRi-bL-lCE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="crg-E0-6KX"/>
-                <constraint firstAttribute="trailing" secondItem="ubt-nz-mqT" secondAttribute="trailing" id="djh-Dk-S9F"/>
+                <constraint firstItem="Wwe-hD-eWO" firstAttribute="top" secondItem="AgS-wg-ici" secondAttribute="bottom" constant="-1" id="juZ-7e-dg6"/>
                 <constraint firstAttribute="bottom" secondItem="Wwe-hD-eWO" secondAttribute="bottom" id="ynZ-fZ-1za"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
